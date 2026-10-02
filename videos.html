@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="拾光个人网站的视频页面。">
+  <title>视频 · 拾光</title>
+  <style>
+    :root { --ink:#182230; --muted:#667085; --paper:#f6f8fb; --line:#e7ebf2; --blue:#356df3; --violet:#7657e8; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:radial-gradient(circle at 8% 4%,rgba(53,109,243,.14),transparent 25rem),var(--paper); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.7; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1080px,calc(100% - 40px)); margin:auto; }
+    nav { display:flex; justify-content:space-between; align-items:center; padding:26px 0; }
+    .brand { font-weight:800; letter-spacing:.12em; }
+    nav .links { display:flex; gap:24px; color:var(--muted); font-size:14px; }
+    nav .links a:hover { color:var(--blue); }
+    header { padding:72px 0 52px; }
+    .eyebrow { color:var(--blue); font-size:13px; font-weight:800; letter-spacing:.16em; }
+    h1 { margin:14px 0 12px; font-size:clamp(42px,7vw,68px); line-height:1.1; letter-spacing:-.05em; }
+    .intro { max-width:600px; margin:0; color:var(--muted); font-size:18px; }
+    .videos { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; padding-bottom:80px; }
+    .card { overflow:hidden; border:1px solid var(--line); border-radius:22px; background:rgba(255,255,255,.86); box-shadow:0 12px 35px rgba(36,53,91,.06); }
+    video { display:block; width:100%; aspect-ratio:16/9; background:linear-gradient(135deg,#15234a,#667eea); object-fit:cover; }
+    .info { padding:20px 22px 23px; }
+    h2 { margin:0 0 5px; font-size:20px; }
+    .info p { margin:0; color:var(--muted); font-size:14px; }
+    .empty { grid-column:1/-1; padding:38px; border:1px dashed #cbd5e1; border-radius:22px; text-align:center; color:var(--muted); background:rgba(255,255,255,.55); }
+    code { padding:3px 7px; border-radius:6px; color:#384860; background:#edf2ff; }
+    footer { padding:28px 0 48px; border-top:1px solid var(--line); color:var(--muted); font-size:14px; }
+    @media(max-width:700px) { nav .links { gap:11px; } .videos { grid-template-columns:1fr; } header { padding-top:45px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav><a class="brand" href="index.html">拾光 / 15978715080</a><div class="links"><a href="index.html">首页</a><a href="index.html#about">关于我</a><a href="videos.html">视频</a></div></nav>
+    <header><div class="eyebrow">VIDEO JOURNAL</div><h1>视频记录</h1><p class="intro">把画面保存下来，分享正在发生的故事。你可以把 MP4 文件放入 <code>videos</code> 文件夹，再复制一个视频卡片来发布新内容。</p></header>
+    <main class="videos">
+      <article class="card"><video controls preload="metadata"><source src="videos/first-video.mp4" type="video/mp4">你的浏览器不支持视频播放。</video><div class="info"><h2>第一个视频</h2><p>把视频文件命名为 first-video.mp4 后即可播放。</p></div></article>
+      <div class="empty"><strong>准备添加更多视频？</strong><br>将视频放入 <code>videos/</code> 文件夹，然后告诉我标题和简介，我可以继续帮你排版。</div>
+    </main>
+    <footer>© 2026 拾光个人网站 · <a href="index.html">返回首页</a></footer>
+  </div>
+</body>
+</html>
